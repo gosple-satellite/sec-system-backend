@@ -166,7 +166,15 @@ exports.usePass = async (
         message: "Pass not found",
       });
     }
-
+	
+	if (pass.status !== "UNUSED") {
+	  return res.status(400).json({
+		success: false,
+		message:
+		  "Pass already used",
+	  });
+	}
+	
     pass.status = "USED";
 
     await pass.save();

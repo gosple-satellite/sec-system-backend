@@ -76,12 +76,6 @@ exports.updateVehicle = async (
   res
 ) => {
   try {
-    const existingVehicle =
-      await Vehicle.findOne({
-        _id: req.params.id,
-        resident: req.user.id,
-      });
-
     const vehicle =
       await Vehicle.findOneAndUpdate(
         {
@@ -91,20 +85,6 @@ exports.updateVehicle = async (
         req.body,
         { new: true }
       );
-
-    if (
-      existingVehicle &&
-      existingVehicle.status !==
-        "VERIFIED" &&
-      vehicle.status === "VERIFIED"
-    ) {
-      await logAccess({
-        resident: vehicle.resident,
-        type: "ENTRY",
-        method: "VEHICLE",
-        subject: `${vehicle.make} (${vehicle.plate})`,
-      });
-    }
 
     res.json({
       success: true,

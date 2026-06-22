@@ -91,6 +91,7 @@ exports.scanCard = async (
     const card =
       await SmartCard.findOne({
         cardNumber,
+		status: "ACTIVE",
       });
 
     if (!card) {
@@ -98,14 +99,6 @@ exports.scanCard = async (
         success: false,
         message:
           "Smart card not found",
-      });
-    }
-
-    if (card.status !== "ACTIVE") {
-      return res.status(400).json({
-        success: false,
-        message:
-          "Card is not active",
       });
     }
 

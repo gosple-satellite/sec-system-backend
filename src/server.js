@@ -21,6 +21,7 @@ const visitorPassRoutes = require("./modules/visitor-passes/visitorPass.routes")
 const smartCardRoutes = require("./modules/smart-cards/smartCard.routes");
 const accessHistoryRoutes = require("./modules/access-history/accessHistory.routes");
 const residentDashboardRoutes = require("./modules/resident-dashboard/dashboard.routes");
+const anprRoutes = require("./modules/anpr/anpr.routes");
 
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/users", userRoutes);
@@ -32,6 +33,7 @@ app.use("/api/v1/visitor-passes", visitorPassRoutes);
 app.use("/api/v1/smart-cards", smartCardRoutes);
 app.use("/api/v1/access-history", accessHistoryRoutes);
 app.use("/api/v1/resident", residentDashboardRoutes);
+app.use("/api/v1/anpr", anprRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)
