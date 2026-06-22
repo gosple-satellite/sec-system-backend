@@ -1,7 +1,6 @@
 // src/modules/visitor-passes/visitorPass.controller.js
 const VisitorPass = require("./visitorPass.model");
 const logAccess = require("../../utils/accessLogger");
-
 const generatePassCode = () => {
   return (
     "RC-" +

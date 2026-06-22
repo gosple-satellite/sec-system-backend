@@ -1,16 +1,7 @@
 // src/modules/dashboard/dashboard.controller.js
-const User = require(
-  "../auth/auth.model"
-);
-
-const Estate = require(
-  "../estates/estate.model"
-);
-
-const Program = require(
-  "../programs/program.model"
-);
-
+const User = require("../auth/auth.model");
+const Estate = require("../estates/estate.model");
+const Program = require("../programs/program.model");
 exports.stats = async (req, res) => {
   try {
     const totalUsers =

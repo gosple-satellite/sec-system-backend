@@ -1,20 +1,8 @@
 // src/modules/resident-dashboard/dashboard.controller.js
-const Vehicle = require(
-  "../vehicles/vehicle.model"
-);
-
-const VisitorPass = require(
-  "../visitor-passes/visitorPass.model"
-);
-
-const SmartCard = require(
-  "../smart-cards/smartCard.model"
-);
-
-const AccessHistory = require(
-  "../access-history/accessHistory.model"
-);
-
+const Vehicle = require("../vehicles/vehicle.model");
+const VisitorPass = require("../visitor-passes/visitorPass.model");
+const SmartCard = require("../smart-cards/smartCard.model");
+const AccessHistory = require("../access-history/accessHistory.model");
 exports.getDashboard =
   async (req, res) => {
     const residentId =

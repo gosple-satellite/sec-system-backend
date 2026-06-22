@@ -1,6 +1,5 @@
 // src/modules/users/user.controller.js
 const User = require("../auth/auth.model");
-
 exports.getUsers = async (req, res) => {
   try {
     const users = await User.find()

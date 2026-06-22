@@ -1,7 +1,6 @@
 // src/modules/vehicles/vehicle.controller.js
 const Vehicle = require("./vehicle.model");
 const logAccess = require("../../utils/accessLogger");
-
 exports.createVehicle = async (
   req,
   res

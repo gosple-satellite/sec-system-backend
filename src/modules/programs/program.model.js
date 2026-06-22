@@ -1,6 +1,5 @@
 // src/modules/programs/program.model.js
 const mongoose = require("mongoose");
-
 const programSchema =
   new mongoose.Schema(
     {

@@ -1,6 +1,5 @@
 // src/modules/visitor-passes/visitorPass.model.js
 const mongoose = require("mongoose");
-
 const visitorPassSchema = new mongoose.Schema(
   {
     resident: {

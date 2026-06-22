@@ -1,6 +1,5 @@
 // src/modules/auth/auth.service.js
 const User = require("./auth.model");
-
 exports.findByEmail = async (email) => {
   return User.findOne({ email }).select("+password");
 };

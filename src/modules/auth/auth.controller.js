@@ -1,12 +1,7 @@
 // src/modules/auth/auth.controller.js
 const crypto = require("crypto");
 const User = require("./auth.model");
-
-const {
-  generateAccessToken,
-  generateRefreshToken,
-} = require("../../utils/generateToken");
-
+const {generateAccessToken, generateRefreshToken} = require("../../utils/generateToken");
 exports.register = async (req, res) => {
   try {
     const user = await User.create(req.body);

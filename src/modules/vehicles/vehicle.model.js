@@ -1,6 +1,5 @@
 // src/modules/vehicles/vehicle.model.js
 const mongoose = require("mongoose");
-
 const vehicleSchema =
   new mongoose.Schema(
     {

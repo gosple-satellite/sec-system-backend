@@ -1,6 +1,5 @@
 // src/modules/access-history/accessHistory.model.js
 const mongoose = require("mongoose");
-
 const accessHistorySchema =
   new mongoose.Schema(
     {

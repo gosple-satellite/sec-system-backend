@@ -1,9 +1,7 @@
 // src/seeds/seedUsers.js
 const mongoose = require("mongoose");
 require("dotenv").config();
-
 const User = require("../modules/auth/auth.model");
-
 async function seedUsers() {
   try {
     await mongoose.connect(process.env.MONGO_URI);

@@ -1,8 +1,6 @@
 // src/modules/auth/auth.routes.js
 const express = require("express");
-
 const auth = require("../../middleware/auth");
-
 const {
   register,
   login,

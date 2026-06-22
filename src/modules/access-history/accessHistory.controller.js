@@ -1,7 +1,5 @@
 // src/modules/access-history/accessHistory.controller.js
-const AccessHistory = require(
-  "./accessHistory.model"
-);
+const AccessHistory = require("./accessHistory.model");
 
 exports.getAccessHistory =
   async (req, res) => {

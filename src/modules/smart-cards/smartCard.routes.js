@@ -1,17 +1,7 @@
 // src/modules/smart-cards/smartCard.routes.js
 const express = require("express");
-
-const auth = require(
-  "../../middleware/auth"
-);
-
-const {
-  getMyCard,
-  freezeCard,
-  createCard,
-  scanCard,
-} = require("./smartCard.controller");
-
+const auth = require("../../middleware/auth");
+const {getMyCard, freezeCard, createCard, scanCard} = require("./smartCard.controller");
 const router = express.Router();
 
 router.use(auth);

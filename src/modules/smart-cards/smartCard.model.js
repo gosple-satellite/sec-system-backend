@@ -1,6 +1,5 @@
 // src/modules/smart-cards/smartCard.model.js
 const mongoose = require("mongoose");
-
 const smartCardSchema =
   new mongoose.Schema(
     {

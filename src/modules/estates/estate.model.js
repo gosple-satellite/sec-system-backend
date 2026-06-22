@@ -1,6 +1,5 @@
 // src/modules/estates/estate.model.js
 const mongoose = require("mongoose");
-
 const estateSchema = new mongoose.Schema(
   {
     name: {
